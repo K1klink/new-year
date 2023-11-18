@@ -1,0 +1,92 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    background: url(../img/фон.jpg) no-repeat;
+    margin: 0;
+}
+
+.wrapper {
+    overflow: hidden;
+    font-family: 'Caveat', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+    animation: gradient 3s forwards;
+    position: relative;
+}
+
+.img {
+    position: absolute;
+    animation: runLeft 10s forwards;
+}
+
+.content {
+    background-color: rgb(222, 229, 240);
+    display: inline-block;
+    color: rgb(189, 147, 158);
+    padding: 50px;
+    border-radius: 300px 0px 300px 0px;
+    animation: shift 3s;
+}
+
+.title {
+    font-size: 50px;
+    text-align: center;
+    animation: text-transform 1s 1s alternate infinite linear;
+}
+
+.poem {
+    font-size: 30px;
+}
+
+@keyframes shift {
+    0% {
+        transform: translateX(-100vw);
+        opacity: 0%;
+    }
+
+    50% {
+        transform: scale(0.5) rotateY(180deg);
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 100%;
+    }
+}
+
+@keyframes gradient {
+    0% {
+        background: rgba(255, 255, 255, 0);
+    }
+
+    50% {
+        background: rgba(25, 201, 229, 0.5);
+    }
+
+    100% {
+        background: rgba(255, 255, 255, 0.5);
+    }
+}
+
+@keyframes text-transform {
+    0% {}
+
+    100% {
+        transform: skew(10deg, 10deg);
+    }
+}
+
+@keyframes runLeft {
+    0% {
+        transform: translateX(-100vw);
+    }
+
+    100% {
+        transform: translateX(-100vw);
+    }
+}
